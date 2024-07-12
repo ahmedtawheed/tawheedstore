@@ -1,0 +1,595 @@
+/**************************************** All Selected *******************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Cairo', sans-serif;
+}
+
+/**************************************** Html ******************************************/
+html {
+    font-size: 85%;
+    overflow-x: hidden;
+}
+
+/**************************************** Navbar ****************************************/
+.logo-toggle .bx {
+    display: none;
+}
+.logo-toggle .logo {
+    display: none;
+}
+nav {
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    background-color:#00185b;
+    box-shadow: 0 0 0.5rem rgb(151, 151, 152);
+}
+nav .nav-bar {
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color:#00185b;
+    margin: 0 auto;
+    padding: 0 30px;
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-bar .nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-links li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0.8rem 1.5rem;
+}
+.nav-links li a{
+    color: rgb(247, 241, 241);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.4s;
+    font-weight: bold;
+    font-size: 16px;
+    transition: ease 0.3s;
+    border-bottom: #00185b solid 1px;
+
+}
+.nav-links li a:hover{
+    color: rgb(206, 232, 11);
+    border-bottom: #ccee53 solid 1px;
+}
+#menu-icon {
+    font-size: 3.5rem;
+    color: #fff;
+    display: none;
+}
+.logo {
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: rgb(251, 247, 247);
+    font-weight: bold;
+    font-family: "Lilita One", sans-serif;
+}
+/**************************************** Responsive header (Navbar) ****************************************/
+@media only screen and (max-width: 1320px){
+    .header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .menu{
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        right: -100%;
+        top: 0;
+        background-color: #00185b;
+        padding: 20px;
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+    nav.active .menu{
+        right: -0%;
+    }
+
+    .menu .logo-toggle{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo-toggle .bx {
+        display: block;
+    }
+    
+    .logo-toggle .logo {
+        display: block;
+    }
+
+    .logo-toggle .siderbarClose{
+        color: #fff;
+        font-size: 30px;
+        cursor: pointer;
+        transition: ease 0.3s;
+    }
+    .logo-toggle .siderbarClose:hover{
+        color: #ccee53;
+        transform: rotate(-90deg);
+    }
+    .nav-bar .nav-links{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    .nav-links li a{
+        display: block;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: ease 0.3s;
+    }
+    .nav-links li a:hover{
+        transform: translateX(-10px);
+    }
+    #menu-icon{
+        display: block;
+        cursor: pointer;
+        color: #fff;
+    }
+}
+
+/**************************************** Responsive Links ****************************************/
+@media only screen and (max-width: 767px){
+    .nav-links li a{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .nav-links li a{
+        font-size: 10px;
+    }
+}
+/**************************************** END Navbar ****************************************/
+
+
+/**************************************** Start Home Page ****************************************/
+.home {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/home/home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home-content {
+    text-align: center;
+}
+.home-content .hi {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #3c3737;
+}
+.home-content .ac {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2e2929;
+    font-family: "Lilita One", sans-serif;
+}
+ .btn-watch{
+    padding: 1px 10px;
+    color: #e9e9e9;
+    background-color: #297eee;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: ease-in-out 0.5s;
+}
+ .btn-watch:hover{
+    background-color: #e6360a;
+}
+/******************************************   Responsive Landing   ************************************/
+/*****************  Screen 900px  *****************/
+@media only screen and (max-width: 900px){
+    .home-content i {
+        font-size: 80px;
+    }
+    .home-content .name {
+        font-size: 32px;
+}
+.home-content .id {
+    font-size: 26px;
+}
+.home-content .number {
+    font-size: 21px;
+}
+
+.home-content .btn {
+    font-size: 18px;
+}
+}
+
+/*****************  Screen 767px  *****************/
+@media only screen and (max-width: 767px){
+    .home-content i {
+        font-size: 70px;
+    }
+    .home-content .name {
+        font-size: 29px;
+}
+.home-content .id {
+    font-size: 22px;
+}
+.home-content .number {
+    font-size: 20px;
+}
+
+.home-content .btn {
+    font-size: 17px;
+}
+
+
+}
+
+/*****************  Screen 400px  *****************/
+@media only screen and (max-width: 400px){
+    .home-content i {
+        font-size: 50px;
+    }
+    .home-content .name {
+        font-size: 22px;
+}
+.home-content .id {
+    font-size: 18px;
+}
+.home-content .number {
+    font-size: 15px;
+}
+
+.home-content .btn {
+    font-size: 14px;
+}
+
+.home-content .hi {
+    font-size: 35px;
+    font-weight: bold;
+}
+.home-content .ac {
+    font-size: 25px;
+}
+ .btn-watch{
+
+    font-size: 15px;
+
+}
+
+}
+/*******************************************   END LANDING Responsive   ***************************************/
+
+
+/****************************************** Start Section Courses  ******************************************/
+.all-section{
+    background-color: #fff;
+    width: 900px;
+    margin: 3rem auto 15rem auto;
+}
+.all-section h2{
+    margin-top: 15px;
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(42, 122, 226);
+    text-align: center;
+    margin-bottom: 2rem;
+    
+}
+.courses-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.box-plants{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: #2e2e2e solid 5px;
+    border-radius: 4px;
+    transition: ease 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.box-plants:hover{
+    color: #000000;
+    border: #0dea5a solid 5px;
+}
+
+.box-plants img{
+    width: 100%;
+    transition: 0.2s;
+    display: block;
+}
+.box-plants img:hover{
+    scale: 1.4;
+    rotate: -5deg;
+    background-blend-mode: darken;
+}
+.box-plants .text-plants{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: #000000;
+}
+.box-plants .text-plants h3{
+    font-size: 1.5rem;
+    color: #000000;
+}
+.box-plants .text-plants p{
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+/******************************************* End Page Courses **********************************************/
+
+
+
+/********************************** Start Section Services **********************************/
+
+.sv-container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3rem;
+}
+.box-sv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    transition: ease 0.5s;
+    border: #53eeba solid 2px;
+    border-radius: 3%;
+    box-shadow: rgb(126, 229, 231) 3px 3px 6px 0px inset, rgba(116, 253, 246, 0.5) -3px -3px 6px 1px inset;
+}
+.box-sv:hover{
+    border: #536dee solid 2px;
+    border-radius: 3%;
+    box-shadow: rgb(69, 103, 240) 3px 3px 6px 0px inset, rgba(50, 100, 201, 0.5) -3px -3px 6px 1px inset;
+
+}
+.img-sv{
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+/****************************************  END  ****************************************/
+/*reponsive services*/
+@media only screen and (max-width: 767px){
+    .all-section{
+        background-color: #fff;
+        width: 400px;
+        margin: 3rem auto 15rem auto;
+    }
+    .sv-container{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3rem;
+    }
+    }
+
+        /*medium screen*/
+        @media only screen and (max-width: 900px){
+            .all-section{
+                background-color: #fff;
+                width: 600px;
+                margin: 3rem auto 15rem auto;
+            }
+            .sv-container{
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                grid-template-columns: repeat(2,1fr);
+                gap: 3rem;
+            }
+            }
+
+    /*small screen*/
+    @media only screen and (max-width: 767px){
+        .all-section{
+            background-color: #fff;
+            width: 200px;
+            margin: 3rem auto 15rem auto;
+        }
+        .sv-container{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(1,1fr);
+            gap: 3rem;
+        }
+        .all-section h2{
+            font-size: 3rem;   
+        }
+        }
+/*end reponsive services*/
+
+
+/****************************************  footer  ****************************************/
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #1b1a1a;
+}
+
+footer h1{
+    margin: 5px 50px 5px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    transition: 0.5s;
+}
+footer h1:hover{
+    color: #e6360a;
+}
+
+
+.icon-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+}
+
+.icon-box i{
+    margin-right: 5px;
+    font-size: 30px;
+    background-color: #3a3939;
+    padding: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.icon-box i:hover {
+   background-color: transparent;
+}
+
+.icon-box .facebook:hover{
+    color: #297eee;
+}
+
+.icon-box .youtube:hover{
+    color: #e6360a;
+}
+
+.icon-box .tlgram:hover{
+    color: #79abec;
+}
+
+.icon-box .tiktok:hover{
+    color: #eaedf0;
+}
+
+.icon-box a {
+    color: grey;
+    text-decoration: none;
+}
+
+.icon-box .bx-support:hover{
+    color: #ccee53;
+
+}
+
+.team{
+    font-size: 25px;
+    color: #f3880e;
+    font-weight: bold;
+}
+
+
+/************************************   Responsive footer   *****************************************/
+@media only screen and (max-width: 767px){
+    footer{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        text-align: center;
+    }
+
+    footer h1{
+        margin: 15px 0 15px 0;
+        font-size: 22px;
+    }
+
+    footer .icon-box{
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 15px 0;
+        padding: 5px;
+    }
+}
+@media only screen and (max-width: 400px){
+
+    footer{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        text-align: center;
+    }
+
+    footer h1{
+        margin: 15px 0 15px 0;
+        font-size: 20px;
+    }
+
+    footer .icon-box{
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 15px 0;
+        padding: 5px;
+        font-size: 20px;
+    }
+
+}
+/************************************  END Footer  ****************************/
+
+/************************************  Start Up & Down  ************************/
+.up-home{
+    background-color: #000634;
+    text-align: center;
+    border-radius: 10%;
+    color: white;
+    font-size: 18px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    padding: 0 3px;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: ease 0.3s;
+}
+.up-home:hover{
+    opacity: 1;
+    background-color: #0dea5a;
+}
+/************************************  END Up & Down  ************************/
+
+
